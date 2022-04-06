@@ -7,11 +7,12 @@ class Plugin:
     # If the plugin should be reloaded from a call to /plugins/reload or a file change
     hot_reload = False
 
-    # The HTML that will be loaded when selecting the plugin in the list
-    main_view_html = "<html><body><h2>Hello World</h2></body></html>"
+    # The HTML file that will be loaded when selecting the plugin in the list
+    main_view_html = "main_view.html"
 
-    # The HTML that will be used to display a widget in the plugin main page
-    tile_view_html = ""
+    # The HTML file that will be used to display a widget in the plugin main page
+    # Comment this out if you don't plan to use a tile view. This will make a button with your plugin name appear
+    tile_view_html = "tile_view.html"
 
     # A normal method. It can be called from JavaScript using call_plugin_function("method_1", argument1, argument2)
     async def method_1(self, *args):
